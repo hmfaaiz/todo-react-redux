@@ -11,7 +11,7 @@ const AddTodo = () => {
     }
     return (
         <Container>
-            <Row>
+            <Row >
                 <Col >
                     <Card>
                         <Card.Body>
