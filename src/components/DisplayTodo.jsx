@@ -1,21 +1,24 @@
 import React, { useState } from 'react'
 import { Card, Container, Row, Col, Form, Button, ListGroup, ListGroupItem } from 'react-bootstrap'
+import CountTodo from './CountTodo'
+
 const DisplayTodo = () => {
     const [todos, setTodos] = useState([{ title: 'Nodejs', desc: 'Part of MERN' },
         { title: 'React', desc: 'Part of MERN' }, { title: 'Redux', desc: 'Part of React' }])
     return (
-        <Container>
+        <Container className='mt-4'>
             <Row>
                 <Col >
                     <Card>
                         <Card.Body>
-                            <h1>Display Todo</h1>
-                            <ListGroup>
+                            <h3>Display Todo</h3>
+                            <CountTodo/>
+                            <ListGroup className='mt-4'>
                                 {
                                 todos.map((item,i) => (
                                     <>
-                                    <ListGroup.Item>
-                                          <h1>{item.title}</h1>
+                                    <ListGroup.Item className='mt-3'>
+                                          <h4>{item.title}</h4>
                                     </ListGroup.Item>
                                     <ListGroup.Item>
                                           <p>{item.desc}</p>

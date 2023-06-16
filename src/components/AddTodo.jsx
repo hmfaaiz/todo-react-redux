@@ -10,12 +10,12 @@ const AddTodo = () => {
         console.log(todo)
     }
     return (
-        <Container>
+        <Container className='mt-3'>
             <Row >
                 <Col >
                     <Card>
                         <Card.Body>
-                            <h1>Add Todo</h1>
+                            <h3>Add Todo</h3>
                             <Form onSubmit={handleSubmit}>
                                 <Form.Group className='mb-4'>
                                     <Form.Label>Title</Form.Label>
@@ -27,7 +27,7 @@ const AddTodo = () => {
                                     <Form.Control as={"textarea"} placeholder='Write here..'
                                      value={todo.desc} onChange={(e)=>setTodo({...todo,desc:e.target.value})}></Form.Control>
                                 </Form.Group>
-                                <Container >
+                                <Container className='mt-3 text-center'>
                                     <Button type='Submit'>
                                         Add Todo
                                     </Button>
